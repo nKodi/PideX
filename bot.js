@@ -1,7 +1,6 @@
 // Stable Release
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const tokens = require('./tokens.json');
 const sql = require('sqlite');
 sql.open('./sunucular.sqlite'); // Create the database!!
 
@@ -175,14 +174,14 @@ client.on('message', async msg => {
 	if (msg.author.bot) return; // We don't want the bot reacting to itself..
 	if (msg.channel.type !== 'text') return; // Lets focus on the use of text channels.
 	
-	if (msg.content.startsWith(tokens.prefix + "ping")){
+	if (msg.content.startsWith("#!" + "ping")){
 		const m = await msg.channel.send("Ping?");
 		m.edit(`Pong! Pingim: ${m.createdTimestamp - msg.createdTimestamp}ms. Yanıt verme sürem: ${Math.round(client.ping)}ms.`);
 		return;
 	}
 	
 	// Handle Commands Module
-	if (!msg.content.startsWith(tokens.prefix)) return; // The start of commands.
+	if (!msg.content.startsWith("#!")) return; // The start of commands.
 	console.log(`[${msg.guild.name}] ${msg.author.tag} >> ${msg.content}`); // Log commands.
 	const cmd = msg.content.toLowerCase().slice(tokens.prefix.length).split(' ')[0]; //Grab the command.
 	if (commands.hasOwnProperty(cmd)){ // Check to see if commands has the command.
@@ -213,4 +212,4 @@ function sendEmbed(msg, guildid, channelid, str){
 	});
 }
 
-client.login(tokens.token);
+client.login("NTE4MzI2MzIzNzY5NTA3ODUz.DuPgeA.iXXddK5BITlm5B8gNPboHfsZGC0");
