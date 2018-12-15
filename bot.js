@@ -10,7 +10,7 @@ const commands = {
 	'komutlar': (msg) => {
 	  msg.channel.send({embed: {
 			title: 'Yardım paneli',
-			description: `Prefix: ${tokens.prefix}\.`,
+			description: `Prefix: #!`,
 			fields: [
 			{
 				name: 'davet',
