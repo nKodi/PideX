@@ -212,4 +212,4 @@ function sendEmbed(msg, guildid, channelid, str){
 	});
 }
 
-client.login("NTE4MzI2MzIzNzY5NTA3ODUz.DuPgeA.iXXddK5BITlm5B8gNPboHfsZGC0");
+client.login("process.env.token");
