@@ -41,7 +41,7 @@ const commands = {
 		}});
 	},
 	'davet': (msg) => {
-		sendEmbed(msg, msg.guild.id, msg.channel.id, 'Davet linki: [link](https://discordapp.com/api/oauth2/authorize?client_id=518326323769507853&permissions=8&scope=bot).');
+		sendEmbed(msg, msg.guild.id, msg.channel.id, 'Davet linki: [link](https://discordapp.com/api/oauth2/authorize?client_id=523421925565792268&permissions=8&scope=bot.');
 	},
 	'gönder': (msg) => {
 		const now = new Date();
